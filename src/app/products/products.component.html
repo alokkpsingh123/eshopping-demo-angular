@@ -1,0 +1,27 @@
+<!-- <div *ngFor="let item of [1, 3, 5, 17, 20]">
+  <p>Number is: {{item}}</p>
+</div> -->
+
+<!-- ngFor is adding some html in the dom thats why it is a structural directive. -->
+
+<div *ngFor="let p of products; let i = index">
+    <p>{{i}}</p>
+  <div class="product-container">
+    <div class="image-container"><img [src]="p.image" alt="product-image" style = "max-height: 50px; max-width: 50px;"></div>
+    <div>
+      <div class="name-container"><h3>{{p.name}}</h3></div>
+      <div class="detailsContainer">
+        <div class="details" [ngStyle] = "{color: p.available == 'Available'?'Green':'Red'}">{{p.available}}</div>
+        <div class="details"><b>Price:</b>{{p.price}}</div>
+        <div class="details"><b>Color:</b>{{p.color}}</div>
+      </div>
+      <div class="options">
+        <button class="btn btn-success">Show Details</button>
+        
+        <button class="btn btn-warning">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [ngStyle] = "{color: p.availabe === 'Available'?'Green':'Red'}" -->
