@@ -1,0 +1,26 @@
+div{
+  display: flex;
+  margin: 10px 0px;
+  padding: 5px 20px;
+  text-align: center;
+  justify-content: center;
+  background-color: #CFE0DD;
+}
+p{
+  font-size: 18px;
+  color: #1d6459 ;
+}
+
+button{
+  margin-left: 30px;
+  align-self: flex-end;
+  padding: 2px 5px;
+  border: none;
+  background-color: #CFE0DD;
+  transition: ease-in-out;
+}
+
+button:hover{
+  background-color:#1d6459 ;
+  transition: ease-in-out;
+}
