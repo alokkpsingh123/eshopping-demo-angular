@@ -5,19 +5,19 @@
 <!-- ngFor is adding some html in the dom thats why it is a structural directive. -->
 
 <div *ngFor="let p of products; let i = index">
-    <p>{{i}}</p>
-  <div class="product-container">
-    <div class="image-container"><img [src]="p.image" alt="product-image" style = "max-height: 50px; max-width: 50px;"></div>
-    <div>
-      <div class="name-container"><h3>{{p.name}}</h3></div>
-      <div class="detailsContainer">
-        <div class="details" [ngStyle] = "{color: p.available == 'Available'?'Green':'Red'}">{{p.available}}</div>
-        <div class="details"><b>Price:</b>{{p.price}}</div>
-        <div class="details"><b>Color:</b>{{p.color}}</div>
+  <div class="product-container" [ngStyle] = "{backgroundColor: p.available == 'Available'?'#D5F5E3':'#FADBD8'}">
+    <div class="image-container"><img [src]="p.image" alt="product-image"></div>
+    <div class="content">
+      <div class="name-container">
+        <h3>{{p.name}}</h3>
+        <div class="detailsContainer">
+          <div class="details" [ngStyle] = "{color: p.available == 'Available'?'Green':'Red'}">{{p.available}}</div>
+          <div class="details"><b>Price:</b>${{p.price}}</div>
+          <div class="details"><b>Color:</b>{{p.color}}</div>
+        </div>
       </div>
       <div class="options">
         <button class="btn btn-success">Show Details</button>
-        
         <button class="btn btn-warning">Buy Now</button>
       </div>
     </div>

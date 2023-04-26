@@ -2,18 +2,38 @@
     display: flex;
     margin: 15px 0px;
     padding: 5px 5px;
-    border-radius:  5px;
+    gap: 10px;
 }
 
-.detailContainer{
+.content{
+    display: flex;
+}
+.image-container{
+   min-width: 50px;
+   max-width: 50px;
+}
+
+.image-container img{
+
+   min-height: 50px;
+   min-width: 50px;
+   max-height: 50px;
+   max-width: 50px;
+ }
+
+.detailsContainer{
     display: flex;
     margin: 0px 20px;
 }
 
 .name-container{
     margin: 0px 20px;
+    gap: 10px;
 }
 
+.name-container h3{
+    padding-bottom: 7px;
+}
 .details{
     width: 140px;
 }
@@ -24,8 +44,19 @@
 }
 
 .btn{
-    border-radius: none;
-    margin: 0px 5px;
-    padding: 2px 10px;
+    border: none;
+    margin: 5px 5px;
+    padding: 2px 7px;
     font-size: 12px;
+    border-radius: 3px;
+}
+
+.btn-success{
+   background-color: #086B53;
+   color: white;
+}
+
+.btn-warning{
+    background-color: #FFB800;
+    color: black;
 }

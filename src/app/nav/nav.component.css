@@ -1,6 +1,7 @@
 .navbar{
     display: flex;
     background-color: #F5B041;
+    position: sticky;
 }
 
 .site-name{
